@@ -29,6 +29,7 @@ const authenticatedUser = (username,password)=>{ //returns boolean
   }
 }
 
+//TASK 7 - Login
 //only registered users can login
 regd_users.post("/login", (req,res) => {
   //Write your code here
@@ -53,7 +54,7 @@ regd_users.post("/login", (req,res) => {
   //return res.status(300).json({message: "Yet to be implemented"});
 });
 
-// Add a book review
+// TASK 8 - Add a book review
 regd_users.put("/auth/review/:isbn", (req, res) => {
   //Write your code here
   /*const bookISBN = req.params.isbn;
@@ -87,6 +88,8 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
    
    res.send("The review on book " + (' ')+ (req.params.isbn) + " has been added!")   
 });
+
+//TASK 9 - Delete review
 
 regd_users.delete("/auth/review/:isbn", (req, res) => {   
     let book = books[req.params.isbn];
